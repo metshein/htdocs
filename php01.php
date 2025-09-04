@@ -10,15 +10,58 @@
     <h1>Harjutus 04</h1>
 
     <h2>4.7 Hinne</h2>
+    <form action="#" method="get">
+        Punktid <input type="number" name="punktid" required value="5" min="1" max="10"><br>
+        <input type="submit" value="Anna hinne">
+    </form>
+
+    <?php
+        if(isset($_GET["punktid"])){
+            $punktid = $_GET["punktid"];
+
+            switch($punktid){ 
+                case ($punktid>=10): echo '5'; 
+                break; 
+                case (($punktid>=5) && ($punktid<=9)): echo '3'; 
+                break; 
+                default: echo 'MA'; 
+            } 
+        }
+
+    ?>
 
 
-adsgadrsfg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     <h2>4.6 Juubel</h2>
-        <form action="#" method="get">
+    <form action="#" method="get">
         Sünniaasta <input type="number" name="synniaasta" required value="2000"><br>
         <input type="submit" value="Leia juubel">
     </form>
