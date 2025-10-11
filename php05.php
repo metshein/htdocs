@@ -7,25 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
-     <form>
-      Bensiini kogus <input type="number" name="kogus" require><br>
-      Bensiini hind <input type="number" name="hind" require><br>
-      <input type="submit" value="Arvuta summa" class="btn btn-info">
+    <h1>harjutus</h1>
+    <form action="#" method="get">
+        Võimsus <input type="number" name="voimsus" required><br>
+        Lastearv <input type="number" name="lastehind" required><br>
+        <input type="submit" value="Leia">
     </form>
     <?php
-    $kogus = 'kogus';
-
-
-    echo $kogus
- 
+    $lastehind = 100;
+    $hind = 10;
+    $automaks = $_GET["voimsus"]*$hind - $_GET["lastehind"]*$lastehind;
+    
+    if($automaks<=0){
+      echo "automaks on 0";
+    } else { 
+      echo $automaks;
+    }
+    
 
     
-   
+
 
     ?>
-
-
 
 
 

@@ -6,39 +6,21 @@ read -p "Grupp: " group
 
 echo "Kasutaja on $user ja parool on $password ning grupp $group"
 
-# groupadd $group
-
-#kas kasutaja on?
-# useradd -m -g $group $user
-useradd $user
-$user:$password
+groupadd $group
+useradd -m -g $group $user
+echo "$user:$password" | chpasswd
 
 
+mkdir -p /home/"$user"/salajane
+chown -R "$user":"$group" /home/"$user"/salajane
+
+echo "Tere tulemast, $user!" > /home/"$user"/salajane/teretulemast_"$user".txt
+# echo "Fail asub: /home/$user/salajane/teretulemast_${user}.txt"
 
 
+"sdfsdf" > "asf.txt"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-mkdir -p /home/"$user"/kataloog
-echo "Tere tulemast, $user!" > /home/"$user"/kataloog/teretulemast_"$user".txt
-chown -R "$user":"$group" /home/"$user"/kataloog
-
-
-echo "Fail asub: /home/$user/kataloog/teretulemast_${user}.txt"
 
 
 

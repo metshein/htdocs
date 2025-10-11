@@ -7,25 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
-     <form>
-      Bensiini kogus <input type="number" name="kogus" require><br>
-      Bensiini hind <input type="number" name="hind" require><br>
-      <input type="submit" value="Arvuta summa" class="btn btn-info">
+    <form action="1.php" method="GET">
+    Nimi: <input type="text" name="name">
+    <input type="submit" value="sisesta">
     </form>
-    <?php
-    $kogus = 'kogus';
-
-
-    echo $kogus
- 
-
-    
-   
-
-    ?>
-
-
+<?php
+function rahakokku(){
+$tahtedearv = strlen($_GET["name"]);
+$summa = $tahtedearv * 2 ;
+$kokku = $summa * 1.24;
+echo "Maksmisele kulub: ".$kokku. " €"; 
+}
+rahakokku();
+?> 
 
 
 
