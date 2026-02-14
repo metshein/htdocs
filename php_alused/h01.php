@@ -1,4 +1,3 @@
 <?php
-
-echo "Tere maailm!";
-    dfg?>
+    echo "Tere maailm!";
+ ?>
